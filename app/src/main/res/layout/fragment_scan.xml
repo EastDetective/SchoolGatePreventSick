@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".school.rollcall.scan.ScanFragment">
+
+    <!--<Button-->
+            <!--android:layout_width="83dp"-->
+            <!--android:layout_height="103dp" android:id="@+id/scan_record" android:layout_gravity="right"-->
+            <!--android:layout_marginRight="15dp" android:layout_marginTop="15dp"-->
+            <!--android:background="@drawable/show_record"/>-->
+
+    <com.dlazaro66.qrcodereaderview.QRCodeReaderView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scan_qr_reader"
+            android:background="@drawable/bg_scanner"/>
+
+    <TextView
+            android:text="將行動條碼對準畫面即可讀取"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView6" android:textColor="@color/white"
+            android:textSize="16sp" android:gravity="center"
+            android:layout_gravity="center_horizontal|center_vertical" android:layout_marginTop="100dp"/>
+
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="50dp"
+            android:textColor="@color/slateGrey"
+            android:background="@drawable/btn_capsule"
+            android:id="@+id/scan_back_btn"
+            android:text="離開Scanner模式"/>
+
+    <!--<TextView-->
+            <!--android:text="查看點名紀錄"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" android:id="@+id/textView8" android:layout_gravity="right"-->
+            <!--android:layout_marginRight="22dp" android:layout_marginTop="60dp" android:textColor="@color/white"/>-->
+</FrameLayout>

@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:groupIndicator="@null"
+              android:id="@+id/form_result"
+              tools:context="com.example.cs.pushpull.personal.form.FormContentFragment"
+              android:orientation="vertical" android:padding="15dp">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="3" android:id="@+id/succed_all"
+            android:visibility="gone">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center_vertical"
+                android:id="@+id/succed" android:layout_marginBottom="5dp">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="3"
+                      android:id="@+id/item_form_result_group_title" android:textSize="18sp"
+                      android:textStyle="bold"
+                      android:textColor="#6a6a6c" android:text="申請成功"/>
+            <View android:layout_width="250dp"
+                  android:layout_height="1dp"
+                  android:background="@color/yellowTan"
+            />
+        </LinearLayout>
+
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:scrollbars="none" android:layout_below="@id/succed"
+                android:id="@+id/form_result_list" android:divider="#00000000"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="3" android:layout_marginTop="10dp"
+            android:id="@+id/fail_all" android:visibility="gone">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center_vertical"
+                android:id="@+id/fail" android:layout_marginBottom="5dp">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="3"
+                      android:id="@+id/item_form_result_group_title2" android:textSize="18sp"
+                      android:textStyle="bold"
+                      android:textColor="#6a6a6c" android:text="申請失敗"/>
+            <View android:layout_width="250dp"
+                  android:layout_height="1dp"
+                  android:background="@color/yellowTan"
+            />
+        </LinearLayout>
+
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:scrollbars="none" android:layout_below="@id/fail"
+                android:id="@+id/form_result_list2" android:divider="#00000000"/>
+    </RelativeLayout>
+</LinearLayout>

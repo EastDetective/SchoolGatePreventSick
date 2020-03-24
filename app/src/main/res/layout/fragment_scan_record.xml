@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="-10dp"
+              android:background="@color/white"
+              android:orientation="vertical"
+              tools:context=".school.rollcall.scan.ScanLoginFragment">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp" android:layout_marginLeft="15dp" android:id="@+id/top">
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/circle">
+            <com.example.cs.pushpull.extension.CircularTextView
+                    android:id="@+id/rollcallRow_item_circular_text_view"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:padding="3dp" android:layout_centerVertical="true" android:background="@color/yellowTan"/>
+            <TextView
+                    android:text="title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/rollcall_title"
+                    android:layout_alignParentLeft="false"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/circle" android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp">
+            <TextView
+                    android:text="8:00 - 10:00 a.m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/rollcall_time"/>
+            <TextView
+                    android:text="多益特訓班"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/rollcall_class_name"
+                    android:layout_below="@id/rollcall_time" android:textStyle="bold" android:textSize="16sp"
+                    android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_centerVertical="false"
+                android:layout_alignParentRight="true">
+            <Button android:layout_width="67dp" android:layout_height="65dp"
+                    android:id="@+id/rollcall_btn"
+                    android:layout_centerInParent="true" android:layout_marginRight="25dp"
+                    android:background="@drawable/my_rollcall"/>
+
+        </RelativeLayout>
+        <TextView
+                android:text="我的所有點名紀錄"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text"
+                android:layout_below="@id/circle" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="500dp" android:background="@color/primaryGray" android:scrollbars="none"
+            android:layout_below="@id/top" android:id="@+id/list"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:background="@color/white" android:layout_below="@id/list">
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/layout_corner">
+
+            <TextView
+                    android:text="U104XXXXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/rollcall_record_uuid"/>
+
+            <TextView
+                    android:text="林同學"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/rollcall_record_std_name" android:textStyle="bold"
+                    android:textSize="16sp" android:layout_toRightOf="@id/rollcall_record_uuid"
+                    android:layout_marginLeft="10dp"/>
+    <TextView
+            android:text="07:10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/rollcall_record_time"
+            android:layout_toLeftOf="@id/rollcall_item_state" android:layout_marginRight="10dp"/>
+    <ImageView android:layout_width="60dp"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentEnd="true"
+               android:layout_centerVertical="true"
+               android:adjustViewBounds="true"
+               android:id="@+id/rollcall_item_state"
+               android:paddingRight="10dp"
+               android:paddingEnd="20dp"/>
+</RelativeLayout>

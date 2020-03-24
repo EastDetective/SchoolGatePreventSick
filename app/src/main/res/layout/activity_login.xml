@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:paddingRight="@dimen/fragment_horizontal_padding"
+        android:paddingLeft="@dimen/fragment_horizontal_padding"
+        android:id="@+id/login_main_view"
+        tools:context=".Login">
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:orientation="vertical">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/login"
+                android:adjustViewBounds="true"
+                android:id="@+id/logo"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:hint="U10XXXXXX"
+                  android:textColor="@color/slateGrey"
+                  android:textColorHint="@color/whiteGray"
+                  android:id="@+id/login_account"
+                  android:background="@drawable/roll_call_select_gray"
+                  android:inputType="text" android:layout_marginTop="5dp"
+                  android:paddingLeft="15dp"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="密碼"
+                android:textColor="@color/slateGrey"
+                android:textColorHint="@color/whiteGray"
+                android:background="@drawable/roll_call_select_gray"
+                android:id="@+id/login_password"
+                android:inputType="textPassword" android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"/>
+
+
+        <TextView
+                android:text="注意：學生帳號請輸入大寫"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/hint" android:layout_marginTop="5dp"
+                android:textColor="@color/white" android:layout_marginLeft="15dp"/>
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:layout_toLeftOf="@id/login_button"
+                          android:layout_toStartOf="@id/login_button"
+                          android:gravity="end"
+                          android:orientation="vertical" android:layout_marginRight="20dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="登入前請詳閱"
+                              android:textSize="16sp"
+                              android:textStyle="bold"
+                              android:textColor="@color/white"/>
+
+                    <TextView android:id="@+id/login_rule"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:clickable="true" android:text="使用規範"
+                              android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content" android:layout_marginTop="5dp">
+
+                    <CheckBox android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/login_check_box"
+                              android:button="@drawable/login_checkbox" android:layout_marginRight="5dp"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="我同意此規範" android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/login_button"
+                    android:background="@drawable/login_arrow"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:gravity="center"
+                  android:orientation="vertical" android:layout_marginBottom="10dp">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="系統警告"
+                  android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold"
+                  android:layout_marginBottom="10dp"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="請使用校務系統帳密登入" android:textColor="@color/white" android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="若本學期更改過校務系統密碼，請使用原密碼登入\n如有問題請至教學發展中心詢問"
+                  android:textSize="12sp"
+                  android:textAlignment="center" android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

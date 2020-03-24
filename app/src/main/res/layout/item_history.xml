@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/lotterylist_corner"
+        android:paddingLeft="15dp" android:paddingRight="15dp"
+        android:paddingTop="10dp" android:paddingBottom="10dp">
+
+    <ImageView
+            android:layout_width="42dp"
+            android:layout_height="18dp" app:srcCompat="@drawable/exchanged" android:id="@+id/imageView7"
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+    />
+    <TextView
+            android:text="抽獎券"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView7"
+            android:textColor="@color/colorPrimaryDark" android:layout_toRightOf="@id/imageView7"
+            android:layout_marginLeft="15dp" android:layout_centerVertical="true"/>
+    <TextView
+            android:text="2019.03.20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/used_date" android:textColor="#b9b9b9"
+            android:textSize="11sp" android:layout_centerVertical="true" android:layout_toLeftOf="@id/imageView8"
+            android:layout_marginRight="8dp"/>
+    <ImageView
+            android:layout_width="0.5dp"
+            android:layout_height="75dp" android:id="@+id/imageView8"
+            android:layout_toLeftOf="@id/is_used" android:layout_marginRight="10dp"
+            android:background="@color/colorAccent"/>
+    <TextView
+            android:text="已兌換"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/is_used" android:textColor="#b9b9b9"
+            android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

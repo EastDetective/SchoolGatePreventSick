@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/fragment_horizontal_padding"
+            android:paddingRight="@dimen/fragment_horizontal_padding"
+            tools:context=".school.recommend.RecommendFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="校區"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp" android:layout_marginBottom="15dp" android:textStyle="bold"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp">
+
+            <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:text="博愛"
+                        android:checked="true"
+                        android:textAlignment="center"
+                        android:button="@null"
+                        android:id="@+id/recommend_school0Radio"
+                        android:background="@drawable/takeleave_radio"/>
+
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="14sp"
+                        android:text="天母"
+                        android:textAlignment="center"
+                        android:button="@null"
+                        android:id="@+id/recommend_school1Radio"
+                        android:background="@drawable/takeleave_radio"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="課程名稱"
+                android:textSize="18sp" android:layout_marginBottom="5dp" android:layout_marginTop="25dp"
+                android:textStyle="bold"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:text="請選擇推薦課程"
+                    android:textSize="14sp"
+                    android:textColor="@color/slateGrey"
+                    android:id="@+id/recommendClassEditText"
+                    android:outlineProvider="none"
+                    android:background="@drawable/takeleave_radio"
+                    android:enabled="false"
+                    tools:targetApi="LOLLIPOP" android:layout_height="40dp" android:paddingLeft="15dp"/>
+
+            <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/recommend_btn"
+                    android:background="@color/Transparent"
+                    android:src="@drawable/keyboard"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:id="@+id/recommendLayout">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="課程類型"
+                    android:id="@+id/recommendClassTypeTextView"
+                    android:visibility="gone" android:textSize="18sp" android:textStyle="bold"
+                    android:layout_marginTop="25dp" android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/recommend_radio_group"
+                        android:visibility="gone">
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="語文"
+                            android:textSize="14sp"
+                            android:checked="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
+                            android:button="@null"
+                            android:background="@drawable/takeleave_radio"
+                            android:id="@+id/recommend_language_radio" android:visibility="visible"/>
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="證照"
+                            android:textSize="14sp"
+                            android:layout_marginRight="10dp"
+                            android:textAlignment="center"
+                            android:button="@null"
+                            android:background="@drawable/takeleave_radio"
+                            android:id="@+id/recommend_license_radio" android:visibility="visible"/>
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="其他"
+                            android:textSize="14sp"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:id="@+id/recommend_other_radio"
+                            android:background="@drawable/takeleave_radio" android:visibility="visible"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推薦原因"
+                    android:id="@+id/recommendReasonTextView"
+                    android:visibility="gone" android:textSize="18sp" android:textStyle="bold"
+                    android:layout_marginTop="20dp" android:layout_marginBottom="10dp"/>
+
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="300dp"
+                      android:hint="請寫下推薦說明，限150字內．"
+                      android:id="@+id/recommend_edit_text"
+                      android:maxLength="150"
+                      android:gravity="top"
+                      android:visibility="gone" android:padding="15dp" android:textSize="11sp"
+                      android:background="@drawable/input_edit_round"/>
+
+
+        </LinearLayout>
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:text="確認送出"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_capsule"
+                android:id="@+id/recommend_send_btn"/>
+    </LinearLayout>
+</ScrollView>

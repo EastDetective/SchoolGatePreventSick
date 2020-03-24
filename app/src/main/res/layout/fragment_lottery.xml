@@ -1,0 +1,36 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            tools:context="com.example.cs.pushpull.game.LotteryFragment"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark">
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingLeft="40dp" android:paddingTop="25dp"
+            android:paddingRight="40dp" android:layout_marginBottom="30dp">
+        <TextView
+                android:text="我的抽獎券"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/nothing" android:text="尚無抽獎券"
+                android:textColor="@color/white" android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+        />
+        <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lottery_list"
+                android:divider="#00ffffff"
+                android:dividerHeight="15dp" android:layout_below="@id/textView" android:layout_marginTop="25dp"
+                android:scrollbars="none"/>
+    </RelativeLayout>
+</ScrollView>

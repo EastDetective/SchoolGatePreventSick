@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "821114412925",
+    "firebase_url": "https://utaipei-notification.firebaseio.com",
+    "project_id": "utaipei-notification",
+    "storage_bucket": "utaipei-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821114412925:android:3cc6e300a98489d4",
+        "android_client_info": {
+          "package_name": "tw.edu.utaipei.pushpullnew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821114412925-u5dmooufhfn6k628qhmo1lqu0udju85f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tw.edu.utaipei.pushpullnew",
+            "certificate_hash": "54222b419a0064d0de7e1993ad1a411016c3c457"
+          }
+        },
+        {
+          "client_id": "821114412925-rel2le09h9pg9fon5ek1ftk3jllhbbbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmd5PHiGKnOxfb6edI_YaY5Kd1-Qq0MNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821114412925-rel2le09h9pg9fon5ek1ftk3jllhbbbi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "821114412925-0is5pphfm1q19qt38nr7g9kem91p9r7d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "tw.edu.utaipei.pushpullnew"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

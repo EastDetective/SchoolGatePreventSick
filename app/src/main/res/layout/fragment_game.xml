@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              tools:context=".game.GameFragment"
+              android:orientation="vertical"
+              android:background="@color/colorPrimaryDark"
+              android:gravity="center_horizontal">
+    <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_marginTop="15dp">
+            <RelativeLayout>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                    <Button
+                            android:layout_column="1"
+                            android:layout_width="65dp"
+                            android:id="@+id/lucky_personalpoint"
+                            android:background="@drawable/lucky_personalpoint"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                    <Space
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                    <Button
+                            android:layout_width="65dp"
+                            android:background="@drawable/lucky_ticket"
+                            android:layout_height="match_parent" android:id="@+id/lucky_ticket"
+                            android:layout_weight="1"/>
+                    <Space
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                    <Button
+                            android:layout_width="65dp"
+                            android:background="@drawable/lucky_exchange"
+                            android:layout_height="50dp" android:id="@+id/lucky_exchange"
+                            android:layout_weight="1"/>
+                </LinearLayout>
+                <TextView android:text="999"
+                          android:textColor="@color/colorPrimary"
+                          android:textSize="18sp"
+                          android:layout_width="34dp"
+                          android:layout_height="26dp"
+                          android:gravity="center"
+                          android:layout_alignParentRight="true"
+                          android:textStyle="bold"
+                          android:layout_marginRight="15dp"
+                          android:id="@+id/total_point"
+                          android:layout_marginTop="22dp"/>
+            </RelativeLayout>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                <TextView android:text="我的積分"
+                          android:textColor="#FFFFFF"
+                          android:textSize="16sp"
+                          android:layout_column="1"
+                          android:layout_weight="1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:gravity="center"/>
+                <Space
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                <TextView android:text="我的抽獎券"
+                          android:textColor="#FFFFFF"
+                          android:textSize="16sp"
+                          android:layout_weight="1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:gravity="center"/>
+                <Space
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                <TextView android:text="積分兌換"
+                          android:textSize="16sp"
+                          android:textColor="#FFFFFF"
+                          android:layout_weight="1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:gravity="center"/>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative" android:paddingLeft="7dp">
+
+        <ImageView
+                android:src="@drawable/turntable_outside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/turntable_outside"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingBottom="52dp" android:layout_alignParentRight="true"/>
+        <ImageView
+                android:src="@drawable/lucky"
+                android:layout_width="123dp"
+                android:layout_height="53dp" android:id="@+id/lucky"
+                android:layout_marginTop="10dp" android:layout_alignLeft="@id/turntable_outside"/>
+        <ImageView
+                android:src="@drawable/lucky_turntable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lucky_turntable"
+                android:layout_marginStart="58dp"
+                android:layout_marginEnd="58dp" android:layout_marginLeft="58dp"
+                android:layout_marginTop="58dp" android:layout_marginRight="58dp" android:layout_marginBottom="58dp"
+                android:layout_centerInParent="true"
+        />
+        <ImageView
+                android:src="@drawable/lucky_go"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/lucky_go"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</LinearLayout>

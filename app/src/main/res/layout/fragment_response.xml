@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              tools:context=".school.previous.response.ResponseFragment"
+              android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/response_tabs"
+            app:tabIndicatorColor="@color/yellowTan"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:paddingBottom="5dp">
+
+        <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:id="@+id/response_viewPager"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="新增課程反應"
+                android:id="@+id/response_newBtn"
+                android:background="@drawable/btn_capsule"/>
+
+    </LinearLayout>
+
+</LinearLayout>

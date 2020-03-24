@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".school.rollcall.scan.ScanLoginFragment">
+
+    <ImageView android:layout_width="395dp"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:padding="40dp"
+               android:adjustViewBounds="true"
+               android:src="@drawable/scan_login" app:layout_constraintTop_toTopOf="parent"
+               android:id="@+id/imageView10" app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintBottom_toTopOf="@+id/cardView"/>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/cardView"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:gravity="center_horizontal"
+                      android:paddingRight="@dimen/fragment_horizontal_padding"
+                      android:paddingLeft="@dimen/fragment_horizontal_padding"
+                      android:paddingTop="20dp"
+                      android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="QR-code Scanner"
+                      android:textColor="@color/white"
+                      android:textSize="25sp"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"/>
+
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:background="@drawable/roll_call_select_gray"
+                      android:layout_marginTop="20dp"
+                      android:hint="U10XXXXXX"
+                      android:inputType="text"
+                      android:textColor="@color/black"
+                      android:textColorHint="@color/whiteGray"
+                      android:paddingLeft="20dp"
+                      android:paddingRight="20dp" android:id="@+id/scanner_account"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleDrawable="@drawable/ic_password_visibility"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/slateGrey"
+                    app:hintAnimationEnabled="false"
+                    android:layout_marginBottom="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roll_call_select_gray"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/slateGrey"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:id="@+id/scanner_password"
+                        android:inputType="textPassword"/>
+                <!--android:hint="密碼"-->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:background="@drawable/roll_call_select_gray"
+                      android:hint="課程代碼"
+                      android:inputType="text"
+                      android:textColor="@color/black"
+                      android:textColorHint="@color/whiteGray"
+                      android:paddingLeft="20dp"
+                      android:paddingRight="20dp" android:id="@+id/scanner_courseid"/>
+
+            <Button android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/login_arrow"
+                    android:id="@+id/scan_login_btn"
+                    android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

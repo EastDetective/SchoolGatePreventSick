@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">PushPull</string>
+
+    <string name="none">未輸入</string>
+
+    <!-- Personal -->
+    <string name="personal">個人</string>
+    <!-- Profile -->
+    <string name="profile">個人資料</string>
+    <string name="edit_profile">修改資料</string>
+    <string name="user_name_title">姓名</string>
+    <string name="department_title">系所</string>
+    <string name="student_id_title">學號</string>
+    <string name="address_title">地址</string>
+    <string name="phone_number_title">電話</string>
+    <string name="admission_date_title">入學日期</string>
+    <string name="student_card_copy_title">學生證影本</string>
+    <string name="id_card_copy_title">身分證影本</string>
+    <string name="bankbook_copy_title">郵局存簿影本</string>
+    <string name="edit_sure">確認修改</string>
+    <!-- TimeTable -->
+    <string name="school_timetables">我的課表</string>
+    <string name="day_of_week_sun">(日)</string>
+    <string name="day_of_week_mon">(一)</string>
+    <string name="day_of_week_tue">(二)</string>
+    <string name="day_of_week_wed">(三)</string>
+    <string name="day_of_week_thr">(四)</string>
+    <string name="day_of_week_fri">(五)</string>
+    <string name="day_of_week_sat">(六)</string>
+    <!-- Point -->
+    <string name="point">個人積分</string>
+    <!-- Form -->
+    <string name="form">線上申請表單</string>
+    <string name="grade_progress">成績進步獎勵</string>
+    <string name="form_tab_apply">申請</string>
+    <string name="form_tab_review">審核中</string>
+    <string name="form_tab_result">申請結果</string>
+    <!-- Match -->
+    <string name="match_tab_helpMe">我要求救</string>
+    <string name="match_tab_saveYou">我要工讀</string>
+    <string name="match_tab_rercord">媒和紀錄</string>
+    <!-- Sun Seed -->
+    <string name="abroad">陽光種子</string>
+
+    <!-- School -->
+    <string name="course">課程</string>
+    <string name="all_course">課程一覽</string>
+    <string name="all_course_tab_all">全部</string>
+    <string name="all_course_tab_vote">投票中</string>
+    <string name="all_course_tab_apply">報名中</string>
+    <string name="all_course_tab_course">上課中</string>
+    <string name="course_type_text_language">語言</string>
+    <string name="course_type_text_license">證照</string>
+    <string name="course_type_text_other">其他</string>
+    <string name="course_type_text_center">教發中心</string>
+    <string name="course_type_text_error">Error</string>
+    <!-- Course List -->
+    <string name="course_item_intro_title">課程大綱：</string>
+    <string name="course_item_course_teacher_title">講師：</string>
+    <string name="course_item_target_student_title">招生對象：</string>
+    <string name="course_item_num_of_student_title">招生名額：</string>
+    <string name="course_item_campus_title">校區：</string>
+    <string name="course_item_course_date_title">課程日期：</string>
+    <string name="course_item_course_place_title">上課地點：</string>
+    <string name="course_item_apply_date_title">報名時間：</string>
+    <string name="course_item_course_cost_title">課程費用：</string>
+    <string name="course_item_apply_method_title">報名方式：</string>
+    <string name="course_item_enroll_post_title">錄取通知：</string>
+    <string name="course_item_other_title">其他資訊：</string>
+    <string name="course_item_apply_result_title">報名結果：</string>
+    <string name="course_item_vote_time_title">投票時間：</string>
+    <string name="arrow_content_description">expand</string>
+
+    <string name="favorite_course">我的最愛</string>
+
+    <string name="recommend_course">推薦課程</string>
+
+    <!-- Previous -->
+    <string name="my_course">我的課程</string>
+    <string name="my_course_tab_previous">報名的課</string>
+    <string name="my_course_tab_recommend">推薦的課</string>
+    <string name="my_course_tab_voted">投票的課</string>
+    <string name="satisfaction_survey">課程問卷</string>
+    <string name="response">課程反應</string>
+
+
+    <string name="take_leave">請假</string>
+    <array name="leaveDate">
+        <item>請選擇日期</item>
+    </array>
+
+    <string name="roll_call">點名</string>
+
+    <!-- Game -->
+    <string name="game">Lucky Day</string>
+
+    <!-- Notification -->
+    <string name="notification">通知中心</string>
+
+
+    <!-- Error Code -->
+    <string name="error_code_E501">這個學生不在這門課</string>
+    <string name="error_code_E502">重複執行的動作</string>
+    <string name="error_code_E503">該帳號已經存在</string>
+    <string name="error_code_E504">帳號或密碼錯誤</string>
+    <string name="error_code_E505">認證字串不同</string>
+    <string name="error_code_E506">第一階段已額滿</string>
+    <string name="error_code_E507">不在報名時間</string>
+    <string name="error_code_E508">無法上傳照片</string>
+    <string name="error_code_E509">無權限點名</string>
+    <string name="error_code_E510">課程代碼錯誤</string>
+    <string name="error_code_E511">此學生沒有投票</string>
+    <string name="error_code_E512">今天已經抽過Luckyday</string>
+    <string name="error_code_E513">點數不夠兌換抽獎券</string>
+    <string name="error_code_E514">登入API錯誤</string>
+    <string name="error_code_E515">密碼加密API錯誤</string>
+    <string name="error_code_E516">已創建帳號，請重新登入</string>
+
+
+    <string name="url">http://utaipei/教發/陽光種子</string>
+
+    <!-- Match -->
+    <string name="coached＿subject">求救課程名稱:</string>
+    <string name="coached＿class">課程類型:</string>
+    <string name="coached_class_compulsory">必修</string>
+    <string name="coached_class_must＿select">必選</string>
+    <string name="coached_class_together_compulsory">共同必修</string>
+    <string name="coached_class_programming">程式設計</string>
+    <string name="allow_time">求救者允許的輔導時間：</string>
+    <string name="coach_request">求救者需求說明：</string>
+    <string name="coached_send_application">送出</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="morning">早上</string>
+    <string name="evening">晚上</string>
+    <string name="space"> </string>
+    <string name="personal_information">個人基本資料</string>
+    <string name="desc">TODO</string>
+    <string name="hint_coach_request">請寫下需求說明與原因，限150字以內</string>
+    <string name="hint_coached_subject">請輸入欲求救課程</string>
+
+    <!-- coachBtn -->
+    <string name="mon_morning">一早</string>
+    <string name="tue_morning">二早</string>
+    <string name="wed_morning">三早</string>
+    <string name="thu_morning">四早</string>
+    <string name="fri_morning">五早</string>
+    <string name="sat_morning">六早</string>
+    <string name="sun_morning">日早</string>
+    <string name="mon_evening">一晚</string>
+    <string name="tue_evening">二晚</string>
+    <string name="wed_evening">三晚</string>
+    <string name="thu_evening">四晚</string>
+    <string name="fri_evening">五晚</string>
+    <string name="sat_evening">六晚</string>
+    <string name="sun_evening">日晚</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

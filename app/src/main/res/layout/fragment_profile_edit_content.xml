@@ -1,0 +1,290 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context="com.example.cs.pushpull.personal.profile.EditContentFragment">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_edit_sticker"
+                    android:gravity="center">
+
+        <com.github.abdularis.civ.CircleImageView
+                android:layout_width="173dp"
+                android:layout_height="173dp"
+                app:strokeColor="@color/colorAccent"
+                android:src="@drawable/edit_portrait"
+                android:id="@+id/profile_sticker_image_view"/>
+        <Button
+                android:background="@drawable/upload"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/profile_sticker_upload_button"
+                android:layout_alignRight="@id/profile_sticker_image_view"
+                android:layout_alignEnd="@id/profile_sticker_image_view"
+                android:layout_alignBottom="@id/profile_sticker_image_view"/>
+
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:paddingTop="25dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView android:text="姓名 ｜ "
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"/>
+            <TextView
+                    android:text="王小明"
+                    android:textSize="18sp"
+                    android:id="@+id/profile_name" android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView android:text="學號 ｜ "
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"/>
+            <TextView
+                    android:text="UXXXXXXXX"
+                    android:textSize="18sp"
+                    android:id="@+id/profile_student_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView android:text="系所 ｜ "
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"/>
+            <EditText
+                    android:text="視覺藝術系"
+                    android:textSize="18sp"
+                    android:id="@+id/profile_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView android:text="入學日期 ｜ "
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"/>
+            <EditText
+                    android:focusable="false"
+                    android:text="2018/09/10"
+                    android:inputType="date"
+                    android:textSize="18sp"
+                    android:id="@+id/profile_admission_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView android:text="地址 ｜ "
+                      android:textSize="18sp"
+                      android:textStyle="bold" android:layout_width="wrap_content"
+                      android:layout_height="match_parent"/>
+            <EditText
+                    android:textSize="18sp"
+                    android:id="@+id/profile_address"
+                    android:inputType="textMultiLine"
+                    android:text="台北市中正區愛國西路"
+                    android:ellipsize="none"
+                    android:singleLine="false"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView android:text="電話 ｜ "
+                      android:textSize="18sp"
+                      android:textStyle="bold" android:layout_width="wrap_content"
+                      android:layout_height="match_parent"/>
+            <EditText
+                    android:text="0987654321"
+                    android:textSize="18sp"
+                    android:id="@+id/profile_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"/>
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/student_card_copy_title"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        <RelativeLayout android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/whiteLightGray"
+                    tools:srcCompat="@drawable/copy_front"
+                    android:id="@+id/profile_student_card_image_view"/>
+            <Button
+                    android:background="@drawable/upload"
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/profile_student_card_upload_button"
+                    android:layout_alignRight="@id/profile_student_card_image_view"
+                    android:layout_alignEnd="@id/profile_student_card_image_view"
+                    android:layout_alignBottom="@id/profile_student_card_image_view"/>
+        </RelativeLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/id_card_copy_title"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        <RelativeLayout android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+            <ImageView
+                    android:id="@+id/profile_id_card_front_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/whiteLightGray"
+                    tools:srcCompat="@drawable/copy_front" />
+            <Button
+                    android:background="@drawable/upload"
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/profile_id_card_front_upload_button"
+                    android:layout_alignRight="@id/profile_id_card_front_image_view"
+                    android:layout_alignEnd="@id/profile_id_card_front_image_view"
+                    android:layout_alignBottom="@id/profile_id_card_front_image_view"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/whiteLightGray"
+                    tools:srcCompat="@drawable/copy_backside"
+                    android:id="@+id/profile_id_card_back_image_view"/>
+            <Button
+                    android:background="@drawable/upload"
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/profile_id_card_back_upload_button"
+                    android:layout_alignRight="@id/profile_id_card_back_image_view"
+                    android:layout_alignEnd="@id/profile_id_card_back_image_view"
+                    android:layout_alignBottom="@id/profile_id_card_back_image_view"/>
+        </RelativeLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/bankbook_copy_title"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        <RelativeLayout android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/whiteLightGray"
+                    tools:srcCompat="@drawable/copy_front"
+                    android:id="@+id/profile_bankbook_image_view"/>
+            <Button
+                    android:background="@drawable/upload"
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/profile_bankbook_upload_button"
+                    android:layout_alignRight="@id/profile_bankbook_image_view"
+                    android:layout_alignBottom="@id/profile_bankbook_image_view"
+                    android:layout_alignEnd="@id/profile_bankbook_image_view"/>
+        </RelativeLayout>
+        <Space
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+
+        <RelativeLayout android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+            <Button
+                    android:layout_width="257dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_capsule"
+                    android:id="@+id/profile_sure_edit_button"
+                    android:text="確認送出"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--<Space-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="25dp"/>-->
+    <!--<TableLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<TableRow android:paddingTop="10dp">-->
+    <!---->
+    <!--</TableRow>-->
+    <!--<TableRow android:paddingTop="10dp">-->
+    <!---->
+    <!--</TableRow>-->
+    <!--<TableRow android:paddingTop="10dp">-->
+    <!---->
+    <!--</TableRow>-->
+    <!--<TableRow android:paddingTop="10dp">-->
+    <!---->
+    <!--</TableRow>-->
+    <!--<TableRow android:paddingTop="10dp">-->
+    <!---->
+    <!--</TableRow>-->
+    <!--<TableRow android:paddingTop="10dp">-->
+    <!---->
+    <!--</TableRow>-->
+
+    <!---->
+    <!--</TableLayout>-->
+</LinearLayout>

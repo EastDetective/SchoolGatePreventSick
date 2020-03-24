@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e25405</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+
+    <color name="yellowTan">#FFE27D</color>
+
+    <color name="offWhite">#FFFAE9</color>
+    <color name="slateGrey">#6A6A6C</color>
+    <color name="Transparent">#00000000</color>
+    <color name="primaryGray">#EFEFF4</color>
+    <color name="whiteGray">#dbdbdb</color>
+    <color name="whiteLightGray">#ebebeb</color>
+    <color name="lightYellow">#FFF4A4</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="orange">#FFA500</color>
+
+    <color name="lightTeal">#A9E9E9</color>
+    <color name="grayish">#B9B9B9</color>
+    <color name="pink">#FFC0CB</color>
+</resources>
+
+

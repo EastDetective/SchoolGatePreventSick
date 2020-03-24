@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.example.cs.pushpull.game.LotteryExchangeFragment" android:gravity="center"
+                android:paddingTop="30dp">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="center">
+        <ImageView
+                android:src="@drawable/final_exchange"
+                android:layout_width="280dp"
+                android:layout_height="250dp"
+                android:id="@+id/imageView3"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" android:gravity="center" android:paddingLeft="68dp"
+                android:paddingRight="72dp">
+            <ImageView
+                    android:src="@drawable/notification"
+                    android:layout_width="12dp"
+                    android:layout_height="20dp" android:id="@+id/imageView4"/>
+            <TextView
+                    android:text="兌換鈕需由教發中心人員點選。請確認您已在教發中心，並出示抽獎券畫面。"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView5"
+                    android:textSize="13sp" android:gravity="center_vertical" android:paddingLeft="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+            android:text="兌換"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:id="@+id/lucky_exchange"
+            android:background="@color/yellowTan"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="40dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

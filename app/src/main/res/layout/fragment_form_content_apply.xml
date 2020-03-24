@@ -1,0 +1,372 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+            tools:context="com.example.cs.pushpull.personal.form.FormContentFragment">
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:paddingTop="20dp"
+                      android:focusable="false"
+                      android:focusableInTouchMode="true"
+                      android:paddingRight="@dimen/fragment_horizontal_padding"
+
+
+                      android:paddingLeft="@dimen/fragment_horizontal_padding"
+                      android:id="@+id/form_apply_applier"
+
+
+        >
+
+            <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/grade_progress"
+                        android:textSize="15sp"
+                        android:checked="true"
+                        android:textAlignment="center"
+                        android:button="@null"
+                        android:background="@drawable/takeleave_radio"
+                        android:id="@+id/newResponse_gradeRadio"/>
+
+                <View android:layout_width="0dp"
+                      android:layout_height="0dp"
+                      android:layout_weight="0.1"/>
+
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="證照獎勵"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:button="@null"
+                        android:background="@drawable/takeleave_radio"
+                        android:id="@+id/newResponse_licenseRadio"/>
+            </RadioGroup>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentTop="true"
+                          android:layout_alignParentLeft="true"
+                          android:layout_alignParentStart="true"
+                          android:text="成績單"
+                          android:textSize="18sp"
+                          android:id="@+id/form_apply_text_view1"
+                          android:textStyle="bold" android:layout_marginBottom="5dp"/>
+
+                <TextView
+                        android:text="(請提供整學年度的成績單)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView8"
+                        android:layout_toRightOf="@id/form_apply_text_view1"
+                        android:layout_alignBottom="@id/form_apply_text_view1" android:layout_marginLeft="5dp"/>
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/form_apply_text_view1"
+                                android:id="@+id/form_apply_image_part1">
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@color/whiteLightGray"
+                            tools:srcCompat="@drawable/copy_front"
+                            android:id="@+id/form_image_view"/>
+                    <Button
+                            android:background="@drawable/upload"
+                            android:layout_width="65dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/form_upload_button"
+                            android:layout_alignRight="@id/form_image_view"
+                            android:layout_alignEnd="@id/form_image_view"
+                            android:layout_alignBottom="@id/form_image_view"/>
+
+                </RelativeLayout>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="成績進步幅度"
+                          android:textSize="18sp"
+                          android:textStyle="bold"
+                          android:layout_below="@id/form_apply_image_part1"
+                          android:id="@+id/form_apply_text_view2" android:layout_marginTop="15dp"
+                />
+
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="200dp"
+                          android:layout_marginTop="10dp"
+                          android:maxLength="150"
+                          android:background="@drawable/input_edit_round"
+                          android:padding="5dp"
+                          android:inputType="text"
+                          android:gravity="top"
+                          tools:ignore="Autofill"
+                          android:layout_below="@id/form_apply_text_view2"
+                          android:id="@+id/form_apply_edit_text1"/>
+
+                <TextView
+                        android:text="學年度"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_below="@id/form_apply_edit_text1"
+                        android:id="@+id/schoolYearTextView" android:layout_marginTop="15dp"/>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/schoolYearTextView"
+                        android:id="@+id/form_apply_scroll_schoolYear">
+
+                    <TextView
+                            android:text="請選擇學年度"
+                            android:id="@+id/onSchoolYearBtnTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:elevation="3dp"
+                            android:outlineProvider="none"
+                            tools:targetApi="lollipop"/>
+                    <Button
+                            android:text="▼"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/schoolYearBtn"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:paddingRight="20dp"
+                            android:paddingEnd="20dp"
+                            android:background="@drawable/roll_call_select_gray"
+                            android:gravity="end|center_vertical"
+                            tools:ignore="HardcodedText,RtlSymmetry"/>
+                </RelativeLayout>
+
+                <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/form_apply_image_part1"
+                        android:id="@+id/licenseColumn">
+
+                    <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            <TextView
+                                    android:text="證照名稱 "
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:ems="10"
+                                    android:id="@+id/licenseName"
+                                    android:layout_weight="1"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            <TextView
+                                    android:text="考取證照日期(YYYY.MM)"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:ems="10"
+                                    android:id="@+id/licenseDate"
+                                    android:layout_weight="1"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" android:text="證照種類 ："/>
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal"
+
+                        android:layout_below="@+id/licenseColumn"
+                        android:id="@+id/radioButtonGroup4">
+                    <RadioButton
+                            android:text="國家考試"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/radioCountry"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:background="@drawable/takeleave_radio"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:layout_margin="5dp"/>
+                    <RadioButton
+                            android:text="政府機關"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/radioGovernment"
+                            android:layout_weight="1"
+                            android:background="@drawable/takeleave_radio"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:layout_margin="5dp"/>
+                    <RadioButton
+                            android:text="國際認證"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/radioNational"
+                            android:layout_weight="1"
+                            android:background="@drawable/takeleave_radio"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:layout_margin="5dp"/>
+                </RadioGroup>
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/radioButtonGroup4"
+                        android:id="@+id/radioButtonGroup5">
+                    <RadioButton
+                            android:text="外語認證"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/radioForeign"
+                            android:layout_weight="1"
+                            android:background="@drawable/takeleave_radio"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:layout_margin="5dp"/>
+                    <RadioButton
+                            android:text="其他"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/radioElse"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:background="@drawable/takeleave_radio"
+                            android:layout_margin="5dp"/>
+                    <RadioButton
+                            android:text="其他"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/radioButton6"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:background="@drawable/takeleave_radio"
+                            android:layout_margin="5dp"
+                            android:visibility="invisible"/>
+                </RadioGroup>
+
+                <!-- Frame Holder -->
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:id="@+id/blank"
+                        android:layout_below="@+id/form_apply_scroll_schoolYear"/>
+
+                <FrameLayout android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_below="@+id/blank"
+                             android:id="@+id/form_apply_frame_holder" android:layout_marginTop="25dp"/>
+
+                <Button android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/btn_capsule"
+                        android:text="提交資料"
+                        android:layout_below="@id/form_apply_frame_holder"
+                        android:id="@+id/form_sure_edit_button"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/form_apply_blocker"
+                        android:background="#30000000"
+                        android:visibility="gone"
+        >
+            <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="10dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:gravity="center"
+                              android:padding="20dp"
+                              android:orientation="vertical">
+
+                    <ImageView android:layout_width="35dp"
+                               android:layout_height="35dp"
+                               android:src="@drawable/ic_apply_fail"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textAlignment="center"
+                              android:textSize="18sp"
+                              android:textStyle="bold"
+                              android:layout_marginTop="20dp"
+                              android:text="現在非線上申請表單時段"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </FrameLayout>
+</ScrollView>

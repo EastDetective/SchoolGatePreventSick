@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".school.previous.SatisfactionSurveyFragment">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+        <com.example.cs.pushpull.extension.RectangleTextView
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:padding="3dp"
+                android:text="語文"
+                android:id="@+id/survey_circular_tv"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/survey_circular_tv"
+                android:layout_toEndOf="@id/survey_circular_tv"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:paddingTop="5dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="課程名稱"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="18sp"
+                    android:text="CourseName"
+                    android:id="@+id/survey_course_name_text_view"/>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/survey_circular_tv"
+                android:layout_marginTop="30dp"
+                android:background="#000000"
+                android:id="@+id/survey_separated_line"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/survey_separated_line"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/survey_question_body">
+
+            </RelativeLayout>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/btn_capsule"
+                    android:clickable="false"
+                    android:id="@+id/survey_send_btn"
+                    android:text="確認送出"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

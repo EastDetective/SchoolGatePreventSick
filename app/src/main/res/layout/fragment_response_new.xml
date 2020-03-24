@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".school.previous.response.ResponseNewFragment">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:paddingTop="20dp"
+                  android:paddingLeft="30dp"
+                  android:paddingRight="30dp"
+                  android:paddingStart="30dp"
+                  android:paddingEnd="30dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="請選擇留言類型"/>
+
+        <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="公開"
+                    android:textSize="15sp"
+                    android:checked="true"
+                    android:textAlignment="center"
+                    android:button="@null"
+                    android:background="@drawable/takeleave_radio"
+                    android:id="@+id/newResponse_publicRadio"/>
+
+            <View android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_weight="0.1"/>
+
+            <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="私人"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:button="@null"
+                    android:background="@drawable/takeleave_radio"
+                    android:id="@+id/newResponse_privateRadio"/>
+        </RadioGroup>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="反應內容"
+                android:layout_marginTop="30dp"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="200dp"
+                  android:layout_marginTop="7dp"
+                  android:minHeight="200dp"
+                  android:hint="請寫下詳細反應內容，限150字內．"
+                  android:id="@+id/newResponse_input"
+                  android:maxLength="150"
+                  android:background="@drawable/input_edit_round"
+                  android:padding="5dp"
+                  android:inputType="text"
+                  android:gravity="top"
+                  tools:ignore="Autofill"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="確認送出"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_capsule"
+                android:id="@+id/newResponse_btn"/>
+
+    </LinearLayout>
+
+</ScrollView>

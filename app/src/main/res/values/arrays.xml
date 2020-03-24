@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- STRING -->
+    <string-array name="course_type_text">
+        <item>@string/course_type_text_language</item>
+        <item>@string/course_type_text_license</item>
+        <item>@string/course_type_text_other</item>
+        <item>@string/course_type_text_center</item>
+    </string-array>
+
+    <string-array name="all_course_tab">
+        <item>@string/all_course_tab_all</item>
+        <item>@string/all_course_tab_vote</item>
+        <item>@string/all_course_tab_apply</item>
+        <item>@string/all_course_tab_course</item>
+    </string-array>
+
+    <string-array name="form_tab">
+        <item>@string/form_tab_apply</item>
+        <item>@string/form_tab_review</item>
+        <item>@string/form_tab_result</item>
+    </string-array>
+
+    <string-array name="form_state">
+        <item>@string/course_type_text_license</item>
+        <item>@string/grade_progress</item>
+    </string-array>
+
+    <string-array name="match_tab">
+        <item>@string/match_tab_helpMe</item>
+        <item>@string/match_tab_saveYou</item>
+        <item>@string/match_tab_rercord</item>
+    </string-array>
+
+    <string-array name="my_course_tab">
+        <item>@string/my_course_tab_previous</item>
+        <item>@string/my_course_tab_recommend</item>
+        <item>@string/my_course_tab_voted</item>
+    </string-array>
+
+    <string-array name="coached_week_select">
+        <item>@string/sun</item>
+        <item>@string/mon</item>
+        <item>@string/tue</item>
+        <item>@string/wed</item>
+        <item>@string/thu</item>
+        <item>@string/fri</item>
+        <item>@string/sat</item>
+    </string-array>
+
+    <string-array name="coached_time_select">
+        <item>@string/morning</item>
+        <item>@string/evening</item>
+    </string-array>
+
+    <string-array name="coached_time_final">
+        <item>@string/sun_morning</item>
+        <item>@string/mon_morning</item>
+        <item>@string/tue_morning</item>
+        <item>@string/wed_morning</item>
+        <item>@string/thu_morning</item>
+        <item>@string/fri_morning</item>
+        <item>@string/sat_morning</item>
+        <item>@string/sun_evening</item>
+        <item>@string/mon_evening</item>
+        <item>@string/tue_evening</item>
+        <item>@string/thu_evening</item>
+        <item>@string/fri_evening</item>
+        <item>@string/sat_evening</item>
+        <item>@string/sun_evening</item>
+    </string-array>
+
+    <!-- COLOR -->
+    <string-array name="course_type_color">
+        <item>#A9E9E9</item>
+        <item>#FFE27D</item>
+        <item>#DDDDDD</item>
+        <item>#fffae9</item>
+    </string-array>
+
+
+
+</resources>

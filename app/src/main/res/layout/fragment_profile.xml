@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".personal.profile.ProfileFragment"
+        android:fillViewport="true">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark">
+
+
+        <ImageView
+                android:src="@drawable/personal_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/profile_portrait"
+                android:adjustViewBounds="true"/>
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/fragment_horizontal_padding"
+                android:paddingRight="@dimen/fragment_horizontal_padding"
+                android:paddingTop="30dp"
+                android:paddingBottom="70dp"
+                android:background="@drawable/profile_table"
+                android:layout_marginTop="-31dp">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/profile_name"/>
+                <Button
+                        android:layout_width="31dp"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/profile_edit_button"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/edit_button"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/profile_name"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/profile_student_id"/>
+
+            </RelativeLayout>
+
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_weight="1"/>
+            <TableRow android:paddingTop="10dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <TextView android:text="系所 ｜ "
+                              android:textSize="18sp"
+                              android:layout_width="wrap_content"
+                              android:layout_height="match_parent"/>
+                    <TextView
+                            android:text="@string/none"
+                            android:id="@+id/profile_department"
+                            android:textSize="18sp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                <TextView android:text="入學日期 ｜ "
+                          android:textSize="18sp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"/>
+                <TextView
+                        android:text="@string/none"
+                        android:id="@+id/profile_admission_date"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                <TextView android:text="地址 ｜ "
+                          android:textSize="18sp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"/>
+                <TextView
+                        android:id="@+id/profile_address"
+                        android:textSize="18sp"
+                        android:text="@string/none"
+                        android:ellipsize="none"
+                        android:singleLine="false"
+                        android:layout_height="match_parent"
+                        android:layout_width="250dp"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:paddingTop="10dp"
+                      android:paddingBottom="10dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                <TextView android:text="電話 ｜ "
+                          android:textSize="18sp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"/>
+                <TextView
+                        android:text="@string/none"
+                        android:id="@+id/profile_phone_number"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TextView android:text="@string/student_card_copy_title"
+                      android:textSize="18sp"
+                      android:paddingBottom="5dp"/>
+            <LinearLayout>
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        tools:srcCompat="@drawable/copy_front"
+                        android:textSize="18sp"
+                        android:id="@+id/profile_studentIdCard"/>
+            </LinearLayout>
+
+            <TextView android:text="@string/id_card_copy_title"
+                      android:textSize="18sp"
+                      android:paddingBottom="5dp"
+                      android:paddingTop="5dp"/>
+            <LinearLayout>
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        tools:srcCompat="@drawable/copy_front"
+                        android:id="@+id/profile_idCard"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        tools:srcCompat="@drawable/copy_backside"
+                        android:id="@+id/profile_idCardBackSide"/>
+            </LinearLayout>
+
+            <TextView android:text="@string/bankbook_copy_title"
+                      android:textSize="18sp"
+                      android:paddingTop="5dp"
+                      android:paddingBottom="5dp"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        tools:srcCompat="@drawable/copy_front"
+                        android:id="@+id/profile_bankbook"/>
+            </LinearLayout>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

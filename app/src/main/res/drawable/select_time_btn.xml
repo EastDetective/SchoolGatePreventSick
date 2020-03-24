@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <!--rectangle 長方形 -->
+        <shape android:shape="rectangle">
+            <!--邊框-->
+            <stroke android:width="1dip" android:color="@android:color/darker_gray" />
+            <!--顏色-->
+            <solid android:color="@color/orange"/>
+        </shape>
+    </item>
+
+    <!-- 預設時 -->
+    <item android:color="@color/white">
+        <shape android:shape="rectangle"  >
+            <solid android:color="@color/white"/>
+            <stroke android:width="1dip" android:color="@android:color/darker_gray" />
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            app:cardUseCompatPadding="false"
+            app:cardCornerRadius="10dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:id="@+id/notificationRow_item_up_part_layout"
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_height="@dimen/notificationRow_collapse_height">
+
+                <!-- Line1 -->
+
+                <com.example.cs.pushpull.extension.RectangleTextView
+                        android:id="@+id/notificationRow_item_circular_text_view"
+                        android:layout_width="75dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:padding="3dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationRow_item_circular_text_view"
+                        android:layout_toRightOf="@id/notificationRow_item_circular_text_view"
+                        android:id="@+id/notificationRow_title"
+                        android:layout_marginTop="-50dp" android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true" android:paddingTop="20dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationRow_item_circular_text_view"
+                        android:text="通知時間"
+                        android:textColor="#9d9d9d"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/notificationRow_time"
+                        android:layout_marginTop="-35dp"
+                        android:textSize="11sp" android:layout_alignParentTop="false"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:layout_below="@id/notificationRow_item_circular_text_view"
+                        android:text="通知時間2"
+                        android:textColor="#9d9d9d"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/notificationRow_item_circular_text_view"
+                        android:id="@+id/notificationRow_time2"
+                        android:layout_marginTop="-25dp"
+                        android:textSize="11sp" tools:visibility="invisible"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationRow_title"
+                        android:id="@+id/notificationRow_content_title"
+                        android:layout_marginTop="40dp" android:layout_marginLeft="5dp"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationRow_content_title"
+                        android:id="@+id/notificationRow_content"
+                        android:layout_marginLeft="5dp"/>
+
+                <!-- Button -->
+
+            </RelativeLayout>
+
+            <ImageView android:layout_height="wrap_content"
+                       android:layout_width="match_parent"
+                       android:layout_marginBottom="5dp"
+                       android:src="@drawable/expand_arrow"
+                       android:id="@+id/notificationRow_item_arrow"
+                       android:contentDescription="@string/arrow_content_description"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

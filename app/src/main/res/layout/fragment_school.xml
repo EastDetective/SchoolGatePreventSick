@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".school.SchoolFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/whiteLightGray">
+
+    <com.youth.banner.Banner
+            android:id="@+id/school_banner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            app:image_scale_type="fit_center" android:clickable="true"/>
+
+    <TableLayout android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="8"
+                 android:paddingRight="@dimen/fragment_horizontal_padding"
+                 android:paddingLeft="@dimen/fragment_horizontal_padding"
+                 android:stretchColumns="0, 1">
+
+        <TableRow android:layout_height="0dp"
+                  android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:id="@+id/school_all_course"
+                    app:cardCornerRadius="10dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center_vertical"
+                              android:layout_marginLeft="15dp"
+                              android:layout_marginStart="15dp"
+                              android:orientation="vertical"
+                              tools:ignore="UseCompoundDrawables">
+
+                    <ImageView android:layout_width="@dimen/school_main_icon_size"
+                               android:layout_height="@dimen/school_main_icon_size"
+                               android:src="@drawable/ic_course_all"
+                               android:contentDescription="@string/all_course"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/all_course"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:id="@+id/school_favorite_course"
+                    app:cardCornerRadius="10dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center_vertical"
+                              android:layout_marginLeft="15dp"
+                              android:layout_marginStart="15dp"
+                              android:orientation="vertical"
+                              tools:ignore="UseCompoundDrawables">
+
+                    <ImageView android:layout_width="@dimen/school_main_icon_size"
+                               android:layout_height="@dimen/school_main_icon_size"
+                               android:src="@drawable/ic_course_favorite"
+                               android:contentDescription="@string/favorite_course"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/favorite_course"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </TableRow>
+
+        <TableRow android:layout_height="0dp"
+                  android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:id="@+id/school_recommend_course"
+                    app:cardCornerRadius="10dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center_vertical"
+                              android:layout_marginLeft="15dp"
+                              android:layout_marginStart="15dp"
+                              android:orientation="vertical"
+                              tools:ignore="UseCompoundDrawables">
+
+                    <ImageView android:layout_width="@dimen/school_main_icon_size"
+                               android:layout_height="@dimen/school_main_icon_size"
+                               android:src="@drawable/ic_course_recommend"
+                               android:contentDescription="@string/recommend_course"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/recommend_course"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:id="@+id/school_my_course"
+                    app:cardCornerRadius="10dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center_vertical"
+                              android:layout_marginLeft="15dp"
+                              android:layout_marginStart="15dp"
+                              android:orientation="vertical"
+                              tools:ignore="UseCompoundDrawables">
+
+                    <ImageView android:layout_width="@dimen/school_main_icon_size"
+                               android:layout_height="@dimen/school_main_icon_size"
+                               android:src="@drawable/ic_course_mine"
+                               android:contentDescription="@string/my_course"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/my_course"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </TableRow>
+
+        <TableRow android:layout_height="0dp"
+                  android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:id="@+id/school_take_leave"
+                    app:cardCornerRadius="10dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center_vertical"
+                              android:layout_marginLeft="15dp"
+                              android:layout_marginStart="15dp"
+                              android:orientation="vertical"
+                              tools:ignore="UseCompoundDrawables">
+
+                    <ImageView android:layout_width="@dimen/school_main_icon_size"
+                               android:layout_height="@dimen/school_main_icon_size"
+                               android:src="@drawable/ic_course_leave"
+                               android:contentDescription="@string/take_leave"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="5dp"
+                              android:text="@string/take_leave"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:id="@+id/school_roll_call"
+                    app:cardCornerRadius="10dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center_vertical"
+                              android:layout_marginLeft="15dp"
+                              android:layout_marginStart="15dp"
+                              android:orientation="vertical"
+                              tools:ignore="UseCompoundDrawables">
+
+                    <ImageView android:layout_width="@dimen/school_main_icon_size"
+                               android:layout_height="@dimen/school_main_icon_size"
+                               android:src="@drawable/ic_course_roll_call"
+                               android:contentDescription="@string/roll_call"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/roll_call"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
+

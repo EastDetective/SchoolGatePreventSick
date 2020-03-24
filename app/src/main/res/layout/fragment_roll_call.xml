@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".school.rollcall.RollCallFragment">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="50dp"
+                    android:paddingRight="@dimen/fragment_horizontal_padding"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="@dimen/fragment_horizontal_padding">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentTop="true"
+                      android:layout_alignParentLeft="true"
+                      android:layout_alignParentStart="true"
+                      android:id="@+id/roll_call_line1">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="學號 ｜ "/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roll_call_stdID_tv"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:layout_alignParentStart="true"
+                      android:layout_below="@id/roll_call_line1"
+                      android:id="@+id/roll_call_line2">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名 ｜ "
+                    android:layout_marginTop="20dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/roll_call_stdName_tv"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/roll_call_line2"
+                      android:id="@+id/roll_call_line3"
+                      android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="課程名稱"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginStart="15dp"
+                          android:layout_centerVertical="true"
+                          android:layout_alignParentLeft="true"
+                          android:layout_alignParentStart="true"
+                          android:text="請選擇課程"
+                          android:id="@+id/roll_call_inside_text"
+                          android:elevation="3dp"
+                          android:outlineProvider="none"
+                          tools:targetApi="lollipop"/>
+                <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:paddingRight="20dp"
+                        android:paddingEnd="20dp"
+                        android:background="@drawable/roll_call_select_gray"
+                        android:gravity="end|center_vertical"
+                        android:text="▼"
+                        android:id="@+id/roll_call_choseBtn"
+                        tools:ignore="HardcodedText,RtlSymmetry"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/roll_call_line3"
+                android:background="@color/colorAccent"
+                android:id="@+id/roll_call_line4"
+                android:visibility="gone"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/roll_call_line4"
+                      android:layout_marginTop="30dp"
+                      android:background="@drawable/roll_call_select_yellow"
+                      android:gravity="center"
+                      android:id="@+id/roll_call_line5"
+                      android:orientation="vertical"
+                      android:padding="30dp"
+                      android:visibility="gone">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="個人專屬QR Code"
+                      android:textSize="17sp"/>
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:id="@+id/roll_call_qr"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dp"
+                      android:text="請掃描QR Code完成點名"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="130dp" android:background="@drawable/lotterylist_corner"
+              android:gravity="center" android:paddingBottom="10dp" android:paddingTop="10dp">
+    <ImageView
+            android:src="@drawable/ic_apply_fail"
+            android:layout_width="35dp"
+            android:layout_height="35dp" android:id="@+id/imageView6"/>
+    <TextView
+            android:id="@+id/yetAllowApplyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" android:layout_marginTop="20dp" android:text="現在非線上申請表單時段"/>
+</LinearLayout>

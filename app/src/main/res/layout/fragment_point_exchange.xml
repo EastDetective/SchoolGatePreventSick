@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".game.GameFragment"
+              android:orientation="vertical"
+              android:background="@color/colorPrimaryDark"
+              android:gravity="center_horizontal">
+
+    <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingLeft="40dp"
+            android:paddingRight="40dp" android:layout_marginTop="25dp">
+        <TextView
+                android:text="積分兌換"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+        <ImageView
+                android:src="@drawable/ticket_icon"
+                android:layout_width="46dp"
+                android:layout_height="20dp" android:id="@+id/imageView5"
+                android:layout_toLeftOf="@id/textView3"
+                android:layout_centerVertical="true" android:layout_marginRight="5dp"/>
+        <TextView
+                android:text="x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:layout_toLeftOf="@id/ticket_number"
+                android:gravity="center"
+                android:layout_marginTop="2dp"/>
+        <TextView
+                android:text="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ticket_number"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp"
+                android:gravity="center"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+        <com.github.abdularis.civ.CircleImageView
+                android:layout_width="254dp"
+                android:layout_height="254dp"
+                android:src="@drawable/lucky_point"
+                android:id="@+id/point"
+                android:layout_centerHorizontal="true" android:layout_marginTop="100dp"
+                android:layout_alignParentTop="true"/>
+        <com.github.abdularis.civ.CircleImageView
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:src="@drawable/score"
+                android:id="@+id/cycle"
+                android:layout_alignRight="@id/point"
+                android:layout_marginTop="100dp"/>
+        <TextView
+                android:text="999"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp" android:id="@+id/point_number" android:textSize="27sp"
+                android:textColor="@color/colorPrimaryDark" android:layout_alignRight="@id/cycle"
+                android:textStyle="bold" android:layout_marginRight="14sp" android:layout_alignTop="@id/cycle"
+                android:layout_marginTop="25dp" android:gravity="center"/>
+        <Button
+                android:text="用100積分兌換抽獎卷"
+                android:layout_width="237dp"
+                android:layout_height="50dp"
+                android:id="@+id/point_to_ticket"
+                android:background="@drawable/btn_capsule" android:textColor="#6a6a6c" android:textStyle="bold"
+                android:layout_centerHorizontal="true" android:layout_below="@id/point"
+                android:layout_marginTop="50dp"/>
+    </RelativeLayout>
+</RelativeLayout>
