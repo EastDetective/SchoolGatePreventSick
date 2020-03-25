@@ -110,7 +110,8 @@ class PushPull : AppCompatActivity() {
                     mainView?.run {
                         Snackbar.make(this, "連線不穩，請檢查網路狀態", Snackbar.LENGTH_LONG).show()
                     }
-                } else {
+                }
+                else {
                     Log.d("Receiver", "CONNECT")
 
                 }
@@ -203,12 +204,72 @@ class PushPull : AppCompatActivity() {
         // Local Data Check
         val fileInputStream: FileInputStream?
         val stringBuilder = StringBuilder()
+        try {
+            fileInputStream = openFileInput(fileName)
+            val inputStreamReader = InputStreamReader(fileInputStream)
+            val bufferedReader = BufferedReader(inputStreamReader)
 
-        // Home Fragment
-        supportFragmentManager.beginTransaction()
-            .add(R.id.push_pull_fragment_holder, SchoolFragment())
-            .commit()
+            var text: String? = null
+            while ({ text = bufferedReader.readLine(); text }() != null) {
+                stringBuilder.append(text)
+            }
 
+            stringBuilder.toString().split(" ").run {
+
+                // TODO : Just simply take data
+                studentName = this[2]
+                studentID = this[0]
+                studentUUID = this[3]
+
+                // TODO : Debug
+                Log.d(TAG, studentUUID)
+
+                // Identify the User
+                disposable =
+                    loginApiService.login(LoginCheck(this[0], this[1]))
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeBy(
+                            onComplete = {
+                            },
+                            onError = {
+                                if (it is HttpException) {
+                                    when (it.message!!.split(" ")[1].toInt()) {
+                                        604 -> {
+                                            Toast.makeText(
+                                                this@PushPull,
+                                                "此用戶不存在",
+                                                Toast.LENGTH_LONG
+                                            ).show()
+                                        }
+                                    }
+                                } else {
+                                    Toast.makeText(this@PushPull, "未知問題，請重新登入", Toast.LENGTH_LONG)
+                                        .show()
+                                    Log.e(TAG, it.message)
+                                }
+
+                                // Launch Login Activity
+                                startActivityForResult(
+                                    Intent(this@PushPull, Login::class.java),
+                                    LOGIN_REQUEST_CODE
+                                )
+                            }
+                        )
+
+                // Home Fragment
+                supportFragmentManager.beginTransaction()
+                    .add(R.id.push_pull_fragment_holder, SchoolFragment())
+                    .commit()
+            }
+        } catch (e: FileNotFoundException) {
+
+            // No User Data in Internal Storage
+            Toast.makeText(this@PushPull, "本地端無資料，請登入", Toast.LENGTH_LONG).show()
+
+            // Launch Login Activity
+            startActivityForResult(Intent(this, Login::class.java), LOGIN_REQUEST_CODE)
+        }
 
         // Bottom Navigation
         pushPull_navigation.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener {
@@ -290,7 +351,12 @@ class PushPull : AppCompatActivity() {
 
             // Write into Internal Storage
             val fileOutputStream: FileOutputStream
-
+            try {
+                fileOutputStream = openFileOutput(fileName, Context.MODE_PRIVATE)
+                fileOutputStream.write("$studentID $password $studentName $studentUUID".toByteArray())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
 
             // Home Fragment
             supportFragmentManager.beginTransaction()
